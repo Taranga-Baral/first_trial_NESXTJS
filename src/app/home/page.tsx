@@ -23,10 +23,6 @@ async function getData(){
     },
   ];
 }
-
-
-
-
 export default async function Home() {
   const data = await getData();
   return (
@@ -34,13 +30,12 @@ export default async function Home() {
       <h1 className="text-center pt-5">Hi There</h1>
       {data.map((user)=>(
         <>
-        <p className="text-wrap px-4" key={user.class}>
+          <p className="text-wrap px-4" key={user.class}>
           Name = {user.name}<br />
           Age = {user.age}<br />
            Class =  {user.class}<br />
             Date Of Birth = {user.dob}<br /><br />
-            </p>
-        </>
+            </p></>
       ))}
     </>
   );
